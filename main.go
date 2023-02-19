@@ -29,13 +29,11 @@ func main() {
 
 	tmpl = template.Must(template.ParseFiles("./static/html/email.html"))
 	fs := http.FileServer(http.Dir("./static/"))
-	
+
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	mux.HandleFunc("/", emailGeneratorHandler)
 
 	log.Fatal(http.ListenAndServe(":8080", mux))
-
-
 
 }
