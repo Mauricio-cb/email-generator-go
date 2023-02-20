@@ -4,6 +4,7 @@ import (
 	"crypto/sha1"
 	"fmt"
 	"math/rand"
+	"strings"
 	"time"
 )
 
@@ -24,7 +25,7 @@ func RandomEmail() string {
 
 	email := nameList() + secondArgumentToEmail() + "@gmail.com"
 
-	return email
+	return strings.ToLower(email)
 }
 
 func nameList() string {
@@ -54,7 +55,7 @@ func nameList() string {
 		"Vinicius",
 		"Samuel",
 		"Pietro",
-		"João Vitor",
+		"JoãoVitor",
 		"Leonardo",
 		"Caio",
 		"Heitor",
@@ -78,6 +79,10 @@ func secondArgumentToEmail() string {
 		"rapzeiro",
 		"fantantasma",
 		"gotico",
+		"futebolista",
+		"triste",
+		"ponteirorebelde",
+		"calvo",
 	}
 
 	rand.Seed(time.Now().UnixNano())
@@ -86,3 +91,4 @@ func secondArgumentToEmail() string {
 
 	return arg
 }
+

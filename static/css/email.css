@@ -16,24 +16,30 @@ body {
   flex-direction: column;
 }
 
-.main-div{
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+.main-div {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
 }
 
-.title{
-    background-color: #3B3936;
-    width: 100%;
-    height: 100px;
-    color: white;
-    font-size: 40px;
-    justify-content: center;
-    align-items: center;
+.title {
+  background-color: #3b3936;
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
 }
+
+#form-div {
+  width: 100vw;
+  height: 80vh;
+}
+
 .form {
-  height: 400px;
+  height: 700px;
   width: 400px;
   margin: 0 auto;
 }
@@ -41,19 +47,46 @@ body {
 .input-div {
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 }
 
 .input-div input {
-  width: 60%;
-  height: 30px;
-  margin: 10px;
+  width: 300px;
+  height: 40px;
+  margin: 20px;
+  border: none;
+  border-bottom: solid 1px black;
+  border-radius: 6px;
   text-align: center;
 }
 
 button {
-  height: 40px;
-  width: 90px;
+  height: 45px;
+  width: 120px;
   border-radius: 6px;
   border: solid 1px black;
   cursor: pointer;
+  color: #fff;
+  background-color: #3b3936;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3936;
+  width: 100%;
+  height: 70px;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+span {
+  color: #aabfaa;
+  font-size: 16px;
 }
