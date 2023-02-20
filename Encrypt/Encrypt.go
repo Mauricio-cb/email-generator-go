@@ -1,16 +1,18 @@
 package Encrypt
 
 import (
-	
 	"crypto/sha1"
 	"fmt"
 	"math/rand"
 	"time"
 )
 
-func EncryptPassword(text string) string{
+func EncryptPassword() string{
+	
+	rand.Seed(time.Now().UnixNano())
+
 	hash := sha1.New()
-    hash.Write([]byte(text))
+    hash.Write([]byte(string(rune(rand.Intn(3000)))))
 
 	hashString := fmt.Sprintf("%x",  hash.Sum(nil))
 	

@@ -18,7 +18,7 @@ type Data struct {
 func emailGeneratorHandler(w http.ResponseWriter, r *http.Request) {
 	data := Data{
 		Email:    Encrypt.RandomEmail(),
-		Password: Encrypt.EncryptPassword("daz"),
+		Password: Encrypt.EncryptPassword(),
 	}
 
 	tmpl.Execute(w, data)
